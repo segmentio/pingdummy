@@ -5,7 +5,17 @@ A dummy healthcheck app deployed via the Segment [Stack][stack].
 
 [stack]: https://github.com/segmentio/stack
 
-## Setup
+## Bootstrap the app
+
+First you can set up the initial DB tables correctly by using:
+
+    # node db/setup.js
+
+Next you will need to set up an SES identity so the app can send out emails:
+
+    # node ops/setup.js
+
+## Terraform setup
 
 If you don't have ssh keys in AWS, you can create them using:
 
