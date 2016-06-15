@@ -1,0 +1,10 @@
+keys/
+.terraform
+terraform.tfstate*
+node_modules/
+.DS_Store
+npm-debug.log
+*~
+plan
+*.swp
+pingdummy.db

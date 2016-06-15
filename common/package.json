@@ -1,0 +1,25 @@
+{
+  "name": "pingdummy-common",
+  "version": "0.0.1",
+  "description": "Pingdummy Common Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentio/pingdummy.git"
+  },
+  "author": "Segment Engineering Team <engineering@segment.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/segmentio/pingdummy/issues"
+  },
+  "homepage": "https://github.com/segmentio/pingdummy#readme",
+  "dependencies": {
+    "aws-sdk": "^2.3.19",
+    "nconf": "^0.8.4",
+    "winston": "^2.2.0",
+    "pingdummy-conf": "file:../conf"
+  }
+}

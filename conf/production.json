@@ -1,0 +1,22 @@
+{
+  "database": {
+    "uri": "mysql://root:password@pingdummy.cluster-cn9v6bxusqhm.us-west-2.rds.amazonaws.com:3306/pingdummy",
+    "options": {
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      }
+    }
+  },
+  "frontend": {
+    "dynamic_assets": false
+  },
+  "beacon": {
+    "uri": "http://beacon.stack.local:80"
+  },
+  "log_level": "info",
+  "notification_from_email": "info@pingdummy.com",
+  "signing_secret": "pingdummy_app",
+  "site_url": "http://pingdummy.com/"
+}

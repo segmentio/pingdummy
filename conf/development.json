@@ -1,0 +1,6 @@
+{
+  "signing_secret": "DEVELOPMENT!MODE",
+  "notification_from_email": "dev@pingdummy.com",
+  "site_url": "http://localhost:3000",
+  "send_emails": false
+}

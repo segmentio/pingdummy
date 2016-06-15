@@ -1,0 +1,26 @@
+{
+  "name": "pingdummy-db",
+  "version": "0.0.1",
+  "description": "Pingdummy DB setup scripts",
+  "main": "setup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentio/stack.git"
+  },
+  "author": "Segment Engineering Team <engineering@segment.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/segmentio/stack/issues"
+  },
+  "homepage": "https://github.com/segmentio/stack#readme",
+  "dependencies": {
+    "mysql": "^2.11.1",
+    "pingdummy-common": "file:../common",
+    "sequelize": "^3.23.3",
+    "sqlite3": "^3.1.4"
+  }
+}

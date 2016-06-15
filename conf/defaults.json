@@ -1,0 +1,23 @@
+{
+  "database": {
+    "uri": "sqlite://",
+    "options": {
+      "storage": "pingdummy.db"
+    }
+  },
+  "frontend": {
+    "dynamic_assets": true
+  },
+  "beacon": {
+    "timeout_millis": 5000,
+    "uri": "http://beacon:3001"
+  },
+  "worker": {
+    "max_interval_seconds": 60,
+    "timeout_millis": 2000,
+    "parallelism": 512
+  },
+  "links_expire_in_millis": 864000000,
+  "send_emails": true,
+  "log_level": "debug"
+}

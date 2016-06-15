@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Pingdummy: Health checks{% endblock title %}
+
+{% block content %}
+
+<form action="/register" method="post">
+  <input type="hidden" name="redirect" value="http://www.opera.com" />
+  <p><input type="text" placeholder="URL" name="url"></p>
+  <p><input type="submit" value="View health checks"></p>
+</form>
+
+{% endblock content %}

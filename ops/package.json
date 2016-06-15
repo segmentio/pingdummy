@@ -1,0 +1,24 @@
+{
+  "name": "pingdummy-ops",
+  "version": "0.0.1",
+  "description": "Pingdummy Ops Tools",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentio/pingdummy.git"
+  },
+  "author": "Segment Engineering Team <engineering@segment.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/segmentio/pingdummy/issues"
+  },
+  "homepage": "https://github.com/segmentio/pingdummy#readme",
+  "dependencies": {
+    "pingdummy-db": "file:../db",
+    "pingdummy-common": "file:../common",
+    "aws-sdk": "^2.3.19",
+    "co": "^4.6.0"
+  }
+}

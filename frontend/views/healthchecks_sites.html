@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}Pingdummy: Health checks{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid col-md-8">
+
+<h1>
+  Health checks for:
+  <br><small>{{ url }}</small> 
+</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Status code</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for entry in beaconHistory %}
+    <tr>
+      <td>
+        {% if entry.wasSuccessful %}
+          <span class="glyphicon glyphicon-ok-circle" style="color:green" aria-hidden="true"></span>
+        {% else %}
+          <span class="glyphicon glyphicon-remove-circle" style="color:red" aria-hidden="true"></span>
+        {% endif %}
+      </td>
+      <td>{{ entry.statusCode }}</td>
+      <td>{{ entry.pingTime }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+</div>
+
+{% endblock content %}
