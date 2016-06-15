@@ -9,11 +9,11 @@ A dummy healthcheck app deployed via the Segment [Stack][stack].
 
 First you can set up the initial DB tables correctly by using:
 
-    # node db/setup.js
+    $ node db/setup.js
 
 Next you will need to set up an SES identity so the app can send out emails:
 
-    # node ops/setup.js
+    $ node ops/setup.js
 
 ## Terraform setup
 
