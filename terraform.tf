@@ -55,17 +55,18 @@ resource "aws_route53_record" "root" {
   }
 }
 
-module "rds-cluster" {
-  source             = "github.com/segmentio/stack//rds-cluster"
+module "db" {
+  source             = "../stack/rds-cluster"
   name               = "pingdummy"
-  environment        = "${module.stack.environment}"
-  vpc_id             = "${module.stack.vpc_id}"
-  security_groups    = "${module.stack.ecs_cluster_security_group_id}"
-  subnet_ids         = "${module.stack.internal_subnets}"
-  availability_zones = "${module.stack.availability_zones}"
   database_name      = "pingdummy"
   master_username    = "root"
   master_password    = "password"
+  environment        = "${module.stack.environment}"
+  vpc_id             = "${module.stack.vpc_id}"
+  zone_id            = "${module.stack.zone_id}"
+  security_groups    = "${module.stack.ecs_cluster_security_group_id}"
+  subnet_ids         = "${module.stack.internal_subnets}"
+  availability_zones = "${module.stack.availability_zones}"
 }
 
 module "beacon" {
