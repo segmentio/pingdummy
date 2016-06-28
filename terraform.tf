@@ -24,7 +24,8 @@ module "pingdummy" {
   log_bucket       = "${module.stack.log_bucket_id}"
   internal_zone_id = "${module.stack.zone_id}"
   external_zone_id = "${module.domain.zone_id}"
-  env_vars         = <<EOF
+
+  env_vars = <<EOF
 [
   { "name": "AWS_REGION",            "value": "${module.stack.region}"        },
   { "name": "AWS_ACCESS_KEY_ID",     "value": "${module.ses_user.access_key}" },
@@ -89,6 +90,7 @@ module "beacon" {
 module "ses_user" {
   source = "github.com/segmentio/stack//iam-user"
   name   = "ses-user"
+
   policy = <<EOF
 {
   "Version": "2012-10-17",
